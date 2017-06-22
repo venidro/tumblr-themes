@@ -6,8 +6,8 @@
 
 <!-- 
 ===========================================================================
-Oka Theme 1.0
-http://ajoen.com/oka-tumblr-theme
+Oka Theme 2.0
+http://ajoen.com/
 
 Website: http://ajoen.com
 Support: hi@ajoen.com
@@ -19,16 +19,17 @@ Support: hi@ajoen.com
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
          
         <!-- BOOLEAN OPTIONS -->        
-		<meta name="if:Use Google Web Fonts" content="1"/>
 		<meta name="if:Show Portrait" content="1"/>
 		<meta name="if:Show Archive" content="1"/>
 		<meta name="if:Show Description" content="1"/>
 		<meta name="if:Infinite Scrolling" content="0"/>
-		<meta name="if:Show Sharing Features" content="1"/>
-		<meta name="if:Share Facebook" content="1"/>
-		<meta name="if:Share Twitter" content="1"/>
-		<meta name="if:Share Google Plus" content="1"/>
-				
+		<meta name="if:Show Sharing  Features" content="1"/>
+		<meta name="if:Colorful Icons" content="0"/>
+		<meta name="if:Centered Layout" content="0"/>
+	    
+	    <!-- FONT -->
+		<meta name="text:Google Font" content="Montserrat"/>
+		
 		<!-- IMAGES -->
 		<meta name="image:Favicon" content=""/>
 		
@@ -36,29 +37,44 @@ Support: hi@ajoen.com
 		<meta name="color:Body" content="#57565E"/>
 		<meta name="color:Background" content="#FFF"/>
 		<meta name="color:Sidebar" content="#BBBBC1">
-		<meta name="color:SidebarBackground" content="#39383D">
-		<meta name="color:SidebarHover" content="#FAF9FD">
-		<meta name="color:SidebarLine" content="#2C2C2E">
+		<meta name="color:Sidebar Background" content="#39383D">
+		<meta name="color:Sidebar Hover" content="#FAF9FD">
+		<meta name="color:Sidebar Line" content="#2C2C2E">
 		<meta name="color:Link" content="#57565E"/>
+		<meta name="color:Link Hover" content="#57565E"/>
 		<meta name="color:Line" content="#EEE"/>
-		<meta name="color:PostInfo" content="#989899"/>
+		<meta name="color:Post Info" content="#989899"/>
 		
 		<!-- SOCIAL MEDIA -->
-		<meta name="text:Facebook Username" content=""/>
-		<meta name="text:Twitter Username" content=""/>
-		<meta name="text:Google Plus Username" content=""/>
-		<meta name="text:Pinterest Username" content=""/>
-		<meta name="text:Linkedin Username" content=""/>
-		<meta name="text:Instagram Username" content=""/>
-		<meta name="text:SoundCloud Username" content=""/>
-		<meta name="text:LastFm Username" content=""/>
+		<meta name="text:Behance Username" content=""/>
+		<meta name="text:Blogger URL" content=""/>
 		<meta name="text:Dribbble Username" content=""/>
-		<meta name="text:Spotify Username" content=""/>
-		<meta name="text:Rdio Username" content=""/>
-		<meta name="text:Vimeo Username" content=""/>
-		<meta name="text:Github Username" content=""/>
+		<meta name="text:Dropbox URL" content=""/>
+		<meta name="text:Facebook Username" content=""/>
 		<meta name="text:Flickr Username" content=""/>
-		
+		<meta name="text:Foursquare Username" content=""/>
+		<meta name="text:Github Username" content=""/>
+		<meta name="text:GooglePlus Username" content=""/>
+		<meta name="text:Instagram Username" content=""/>
+		<meta name="text:Lastfm Username" content=""/>
+		<meta name="text:Linkedin Username" content=""/>
+		<meta name="text:Medium Username" content=""/>
+		<meta name="text:Messenger Username" content=""/>
+		<meta name="text:Pinterest Username" content=""/>
+		<meta name="text:PSN Username" content=""/>
+		<meta name="text:Rdio Username" content=""/>
+		<meta name="text:Skype Name" content=""/>
+		<meta name="text:SoundCloud Username" content=""/>
+		<meta name="text:Spotify Username" content=""/>
+		<meta name="text:Stack Overflow ID" content=""/>
+		<meta name="text:Steam ID" content=""/>
+		<meta name="text:Twitch Username" content=""/>
+		<meta name="text:Twitter Username" content=""/>
+		<meta name="text:Vimeo Username" content=""/>
+		<meta name="text:VK ID" content=""/>
+	    <meta name="text:WordPress URL" content=""/>
+		<meta name="text:YouTube Username" content=""/>
+
 		<meta name="text:Disqus Shortname" content=""/>
 		<meta name="text:Google Analytics ID" content=""/>
 		
@@ -72,9 +88,7 @@ Support: hi@ajoen.com
         
         <link rel="alternate" type="application/rss+xml" href="{RSS}" >
 				
-		{block:IfUseGoogleWebfonts}
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,700,600&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-		{/block:IfUseGoogleWebfonts}
+		<link href='https://fonts.googleapis.com/css?family={text:Google Font}&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
 		{block:IfFaviconImage}
 		<link rel="icon" href="{image:Favicon}" />
@@ -146,64 +160,67 @@ Support: hi@ajoen.com
 			/** grid - simpler framework **/
 
 			.container {
-				width: 940px;
-				margin: 0;
-			}
-
-			.grid1, .grid2, .grid3, .grid4, .grid5, .grid6, .grid7, .grid8, .grid9, .grid10, .grid11 {
-				float: left;
-				display: inline;
-				margin: 0 0 0 20px;
-			}
-
-			.grid1 {
-				width: 60px;
-			}
-
-			.grid2 {
-				width: 140px;
-			}
-
-			.grid3 {
-				width: 220px;
-			}
-
-			.grid4 {
-				width: 300px;
-			}
-
-			.grid5 {
-				width: 380px;
-			}
-
-			.grid6 {
-				width: 460px;
-			}
-
-			.grid7 {
-				width: 540px;
-			}
-
-			.grid8 {
-				width: 620px;
-			}
-
-			.grid9 {
-				width: 700px;
-			}
-
-			.grid10 {
-				width: 780px;
-			}
-
-			.grid11 {
-				width: 860px;
-			}
-
-			.first {
-				margin-left: 0;
-				clear: left;
-			}
+            	width: 978px;
+            	margin: 0;
+            }
+            
+            .container.centered {
+                margin: 0 auto;
+            }
+            
+            .grid1, .grid2, .grid3, .grid4, .grid5, .grid6, .grid7, .grid8, .grid9, .grid10, .grid11 {
+            	float: left;
+            	margin-left: 30px;
+            }
+            
+            .grid1 {
+            	width: 54px;
+            }
+            
+            .grid2 {
+            	width: 138px;
+            }
+            
+            .grid3 {
+            	width: 222px;
+            }
+            
+            .grid4 {
+            	width: 306px;
+            }
+            
+            .grid5 {
+            	width: 390px;
+            }
+            
+            .grid6 {
+            	width: 474px;
+            }
+            
+            .grid7 {
+            	width: 558px;
+            }
+            
+            .grid8 {
+            	width: 642px;
+            }
+            
+            .grid9 {
+            	width: 726px;
+            }
+            
+            .grid10 {
+            	width: 810px;
+            }
+            
+            .grid11 {
+            	width: 894px;
+            }
+            
+            .first {
+            	margin-left: 0;
+            	clear: left;
+            }
 
 			/* clearfix */
 
@@ -227,18 +244,27 @@ Support: hi@ajoen.com
 			/** main **/
 
 			body {
-				{block:IfUseGoogleWebfonts}font:400 14px/24px 'Open Sans', sans-serif;{/block:IfUseGoogleWebfonts} 
-				{block:IfNotUseGoogleWebfonts}font: 14px/24px Helvetica, Arial, sans-serif;{/block:IfNotUseGoogleWebfonts} 
+				font:400 15px/26px '{text:Google Font}', sans-serif;
 				margin:0;
 				padding:0;
 				background:{color:Background};
 				color:{color:Body}
 			}
-
+			
 			a, a:hover {
 				text-decoration: none;
 				border: none;
-				color:{color:Link}
+			}
+			
+			a {
+			    -webkit-transition: 0.3s;
+				-moz-transition: 0.3s;
+				transition: 0.3s;
+			    color:{color:Link}
+			}
+			
+			a:hover {
+			   color:{color:Link Hover}
 			}
 
 			.header {
@@ -248,7 +274,10 @@ Support: hi@ajoen.com
 			}
 
 			.padding {
-				padding: 40px 20px 30px
+			    float: left;
+			    width: 100%;
+			    box-sizing: border-box;
+				padding: 40px 20px
 			}
 			
 			.hidden {
@@ -285,14 +314,14 @@ Support: hi@ajoen.com
 			::-webkit-scrollbar-thumb:vertical {
 				border-radius:20px;
 				-moz-border-radius:20px;
-				background-color: {color:SidebarBackground};
+				background-color: {color:Sidebar Background};
 				height:100px;
 			}
 
 			::-webkit-scrollbar-thumb:horizontal {
 				border-radius:20px;
 				-moz-border-radius:20px;
-				background-color: {color:SidebarBackground}; 
+				background-color: {color:Sidebar Background}; 
 				height:10px !important;
 			}
 
@@ -305,7 +334,7 @@ Support: hi@ajoen.com
 			/** sidebar **/	
 			
 			.sidebar {
-				background: {color:SidebarBackground};
+				background: {color:Sidebar Background};
 				color:{color:Sidebar};
 				position: fixed;
 				min-height: 100%;
@@ -313,7 +342,7 @@ Support: hi@ajoen.com
 			}
 			
 			.sidebar h1 a {
-				color:{color:SidebarHover}
+				color:{color:Sidebar}
 			}
 			
 			.sidebar, .sidebar a{
@@ -321,15 +350,13 @@ Support: hi@ajoen.com
 			}
 			
 			.sidebar a:hover{
-				color:{color:SidebarHover};
+				color:{color:Sidebar Hover};
 			}
 
 			.description {
-				margin: 30px 35px 0;
+				margin: 0 35px 0;
 				padding: 0;
-				text-align: justify;
-				font-size: 12px;
-				line-height: 18px;
+				text-align: center;
 			}
 
 			.social-media {
@@ -342,9 +369,6 @@ Support: hi@ajoen.com
 			.social-media li a{
 				color: {color:Sidebar}; 
 				float: left;
-				-webkit-transition: 0.3s;
-				-moz-transition: 0.3s;
-				transition: 0.3s;
 			}
 
 			.social-media li{
@@ -362,18 +386,18 @@ Support: hi@ajoen.com
 				border-radius: 64px;
 				-moz-border-radius: 64px;
 				-webkit-border-radius: 64px;
-				margin: 0 0 10px 0;
+				margin: 0 0 20px 0;
 			}
 				
 			/* navigation */
 					
 			nav ul {
-				margin: 30px 35px 0;
+				margin: 25px 35px 0;
 			}
 			
 			nav ul li{
 				padding: 6px 0;
-				border-bottom: 1px solid {color:SidebarLine};
+				border-bottom: 1px solid {color:Sidebar Line};
 			}
 			
 			nav ul li:last-child{
@@ -409,15 +433,26 @@ Support: hi@ajoen.com
 
 			/* text */
 			
-			article.text blockquote {
-				margin-left: 30px
+			article blockquote {
+				margin-left: 25px
+			}
+			
+			article blockquote p:first-of-type {
+			    margin-top: 0;
+			}
+			
+			article blockquote p:last-of-type {
+			    margin-bottom: 0;
 			}
 				
 			/* quote */
 
 			article.quote p {
+			    position: relative;
+			    box-sizing: border-box;
 				font-size: 22px;
-				padding: 0
+				line-height:28px;
+				padding: 0 0 0 35px;
 			}
 			
 			article.quote p:before {
@@ -425,8 +460,9 @@ Support: hi@ajoen.com
 				font-size: 40px;
 				font-weight: 700;
 				font-style: italic;
-				float: left;
-				margin-right: 14px;
+				position: absolute;
+				left: 0;
+				top: 8px;
 			}
 
 			article.quote p.owner {
@@ -435,6 +471,7 @@ Support: hi@ajoen.com
 				display: inline-block;
 				width: 100%;
 				font-size: 14px;
+				margin: 10px 0 0;
 			}
 			
 			article.quote p.owner:before {
@@ -444,10 +481,11 @@ Support: hi@ajoen.com
 			/* photo */	
 			
 			article.photo .photo{
-				margin: 20px 0 0;
+				margin: 10px 0;
 			}
 
 			article.photo img {
+				display: block;
 				width: 100%;
 				height: auto
 			}
@@ -457,6 +495,10 @@ Support: hi@ajoen.com
 			}
 				
 			/* link */
+			
+			article.link h2 .icon {
+			    font-size: 24px;
+			}
 
 
 			/* chat */
@@ -485,16 +527,34 @@ Support: hi@ajoen.com
 			}
 
 			article.chat ul.conv li span.label {
-				width: 100px;
+				width: 20%;
 				float: left
 			}
 				
 			article.chat ul.conv li p {
+				width: 80%;
 				float:left;
 				margin:0;
 			}				
 			
 			/* video */
+		
+			.video-wrapper {
+			    margin: 10px 0;
+                position: relative;
+                padding-bottom: 56,25%;
+                overflow: hidden;
+                width: 100% !important;
+                height: 0 !important;
+            }
+             
+            .video-wrapper iframe {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+            }
 				
 			/* audio */
 			
@@ -533,7 +593,7 @@ Support: hi@ajoen.com
 			}
 
 			article .tags a {
-				color: {color:PostInfo};
+				color: {color:Post Info};
 				border: 0
 			}
 			
@@ -553,7 +613,7 @@ Support: hi@ajoen.com
 			
 			article .post-info ul li,
 			article .post-info ul li a {
-				color: {color:PostInfo};
+				color: {color:Post Info};
 			}
 
 			article .post-info ul li {
@@ -561,16 +621,13 @@ Support: hi@ajoen.com
 				float: left;
 				margin: 0;
 				padding: 0;
-				-webkit-transition: .2s ease-in-out;
-				-moz-transition: .2s ease-in-out;
-				transition: .2s ease-in-out;
 				position:relative
 			}
 			
 			article .post-info ul li::before {
 				content:'';
 				display: inline-block;
-				background: {color:Line};
+				background: {color:Post Info};
 				-webkit-border-radius:8px;
 				-moz-border-radius:8px;
 				border-radius:8px;
@@ -588,26 +645,18 @@ Support: hi@ajoen.com
 				background:#fff;
 				position:absolute;
 				top:-1px;
-				padding:0 10px;
 				left:90px;
-				border-left:1px solid #eee;
+				width: 180px;
+				padding:5px 10px;
+				border-left:1px solid {color:Post Info};
 			}
 			
 			article .post-info ul li.share ul.share_cont li {
 				float:left;
-				margin:0 0 5px 0;
-				padding:0 0 0 10px;	
-				width:80px;
+				margin:0 5px;
+				padding:0;	
 				line-height:20px;
 				height:20px
-			}
-			
-			article .post-info ul li.share ul.share_cont li:last-child {
-				margin:0 0 5px
-			}
-			
-			article .post-info ul li.share ul.share_cont li:hover {
-				border:1px solid #fff
 			}
 			
 			article .post-info ul li.share ul.share_cont li:before {
@@ -654,7 +703,7 @@ Support: hi@ajoen.com
 			.pagination{
 				width: 100%;
 				display: inline-block;
-				margin: 10px 0 30px 0;
+				margin: 20px 0 5px 0;
 			}
 
 			.pagination li{
@@ -665,23 +714,43 @@ Support: hi@ajoen.com
 
 			.pagination li a{
 				padding:0 20px;
-				color:{color:PostInfo}
+			}
+			
+			.pagination li .icon {
+			    font-size: 22px;
 			}
 
 			.pagination li.next{
 				text-align:right;
 				float:right
 			}
+			
+			.pagination li.next a {
+			    float: right;
+			}
+			
+			.pagination li.next .icon {
+			    float: right;
+			    margin: 2px 0 0 4px;
+			}
 
 			.pagination li.prev{
 				text-align: left
+			}
+			
+			.pagination li.prev a {
+			    float: left;
+			}
+			
+			.pagination li.prev .icon {
+			    float: left;
+			    margin: 2px 4px 0 0;
 			}
 
 			/* headings */
 
 			h1 {
-				{block:IfUseGoogleWebfonts}font: 700 32px/26px 'Open Sans', sans-serif;{/block:IfUseGoogleWebfonts}
-				{block:IfNotUseGoogleWebfonts}font:bold 32px/26px Helvetica, Arial, sans-serif;{/block:IfNotUseGoogleWebfonts}
+                font-size:30px;
 				display: block;
 				margin: 10px 0 0;
 				color: #666;
@@ -691,8 +760,7 @@ Support: hi@ajoen.com
 			}
 
 			h2 {
-				font-size: 22px;
-				{block:IfUseGoogleWebfonts}font-weight: 700;{/block:IfUseGoogleWebfonts}
+				font-size: 30px;
 				display: inline-block
 			}
 			
@@ -715,111 +783,237 @@ Support: hi@ajoen.com
 			 
 			#back-top {
 				position: fixed;
-				bottom: 20px;
-				left: 20px;
-			}
-
-			#back-top a {
-				width: 31px;
-				display: block;
-				-webkit-transition: 1s;
-				-moz-transition: 1s;
-				transition: 1s;
-			}
-
-			#back-top span {
-				width: 31px;
-				height: 31px;
-				display: block;
-				margin-bottom: 7px;
-				background: url(http://static.tumblr.com/gakc6wq/nLPmb7nr0/arrow-top.gif) no-repeat center center;
-			}
-
-			#back-top a:hover span {
-				background-color: {color:SidebarLine};
+				bottom: 25px;
+				left: 35px;
+				opacity: 0;
+				font-size: 22px;
+				-webkit-transition: 0.5s;
+				-moz-transition: 0.5s;
+				transition: 0.5s;
 			}
 			
-			/* IcoMoon */
+			#back-top.show {
+			    opacity: 1;
+			}
+			
+			.centered #back-top {
+			    left: auto;
+			    right: 35px;
+			}
 
-			@font-face {
-				font-family: 'entypo';
-				src:url('http://static.tumblr.com/kmpcbew/Z0Smg2mye/entypo.eot');
-				src:url('http://static.tumblr.com/kmpcbew/Z0Smg2mye/entypo.eot?#iefix') format('embedded-opentype'),
-					url('http://static.tumblr.com/kmpcbew/kz4mg2mz8/entypo.svg#entypo') format('svg'),
-					url('http://static.tumblr.com/kmpcbew/09Rmg2mzm/entypo.woff') format('woff'),
-					url('http://static.tumblr.com/kmpcbew/L2Omg2mzy/entypo.ttf') format('truetype');
-				font-weight: normal;
-				font-style: normal;
-			}
 			
-			[data-icon]:before {
-				font-family: 'entypo';
-				content: attr(data-icon);
-				speak: none;
-				font-weight: normal;
-				line-height: 1;
-				-webkit-font-smoothing: antialiased;
-			}
+			/* Icons */
+
+            @font-face {
+                font-family: 'Oka';
+                src: url(data:application/font-woff2;charset=utf-8;base64,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) format('woff2'),
+         url(data:application/font-woff;charset=utf-8;base64,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) format('woff');
+                font-weight: normal;
+                font-style: normal;
+            }
 			
-			[class^="icon-"]:before, [class*=" icon-"]:before {
-				font-family: 'entypo';
-				font-style: normal;
-				speak: none;
-				font-weight: normal;
-				line-height: 1;
-				-webkit-font-smoothing: antialiased;
-			}
-			.icon-facebook:before {
-				content: "\e01e";
-			}
-			.icon-twitter:before {
-				content: "\e01d";
-			}
-			.icon-googleplus:before {
-				content: "\e007";
-			}
-			.icon-tumblr:before {
-				content: "\e020";
-			}
-			.icon-pinterest:before {
-				content: "\e01f";
-			}
-			.icon-linkedin:before {
-				content: "\e014";
-			}
-			.icon-instagram:before {
-				content: "\e015";
-			}
-			.icon-soundcloud:before {
-				content: "\e016";
-			}
-			.icon-lastfm:before {
-				content: "\e017";
-			}
-			.icon-rdio:before {
-				content: "\e018";
-			}
-			.icon-dribbble:before {
-				content: "\e019";
-			}
-			.icon-vimeo:before {
-				content: "\e01a";
-			}
-			.icon-flickr:before {
-				content: "\e021";
-			}
-			.icon-spotify:before {
-				content: "\e022";
-			}
-			.icon-github:before {
-				content: "\e023";
-			}
+			[class^="icon-"], [class*=" icon-"] {
+                font-family: 'oka' !important;
+                speak: none;
+                font-style: normal;
+                font-weight: normal;
+                font-variant: normal;
+                text-transform: none;
+                line-height: 1;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+            
+            .icon-link:before {
+                content: "\e921";
+            }
+            .icon-chevron-down:before {
+            	content: "\e91c";
+            }
+            .icon-chevron-left:before {
+            	content: "\e91d";
+            }
+            .icon-chevron-right:before {
+            	content: "\e91e";
+            }
+            .icon-chevron-up:before {
+            	content: "\e91f";
+            }
+            .icon-behance:before {
+            	content: "\e900";
+            }
+            .color .icon-behance {
+            	color: #1769ff;
+            }
+            .icon-blogger:before {
+            	content: "\e901";
+            }
+            .color .icon-blogger:before {
+           		color: #f38936;
+            }
+            .icon-dribbble:before {
+            	content: "\e902";
+            }
+            .color .icon-dribbble:before {
+            	color: #ea4c89;
+            }
+            .icon-dropbox:before {
+            	content: "\e903";
+            }
+            .color .icon-dropbox:before {
+            	color: #007ee5;
+            }
+            .icon-facebook:before {
+            	content: "\e904";
+            }
+            .color .icon-facebook:before {
+            	color: #3b5998;
+            }
+            .icon-flickr:before {
+            	content: "\e917";
+            }
+            .color .icon-flickr:before {
+            	color: #0063dc;
+            }
+            .icon-foursquare:before {
+            	content: "\e905";
+            }
+            .color .icon-foursquare:before {
+            	color: #f94877;
+            }
+            .icon-github:before {
+            	content: "\e906";
+            }
+            .color .icon-github:before {
+            	color: #000;
+            }
+            .icon-googleplus:before {
+            	content: "\e907";
+            }
+            .color .icon-googleplus:before {
+            	color: #dc4e41;
+            }
+            .icon-instagram:before {
+            	content: "\e908";
+            }
+            .color .icon-instagram:before {
+           		color: #e4405f;
+            }
+            .icon-lastfm:before {
+            	content: "\e918";
+            }
+            .color .icon-lastfm:before {
+            	color: #d51007;
+            }
+            .icon-linkedin:before {
+            	content: "\e909";
+            }
+            .color .icon-linkedin:before {
+            	color: #0077b5;
+            }
+            .icon-medium:before {
+            	content: "\e90a";
+            }
+            .color .icon-medium:before {
+            	color: #00ab6b;
+            }
+            .icon-messenger:before {
+            	content: "\e90b";
+            }
+            .color .icon-messenger:before {
+            	color: #0084ff;
+            }
+            .icon-pinterest:before {
+            	content: "\e90c";
+            }
+            .color .icon-pinterest:before {
+            	color: #bd081c;
+            }
+            .icon-playstation:before {
+            	content: "\e90d";
+            }
+            .color .icon-playstation:before {
+            	color: #039;
+            }
+            .icon-rdio:before {
+            	content: "\e90e";
+            }
+            .color .icon-rdio:before {
+            	color: #008fd5;
+            }
+            .icon-skype:before {
+            	content: "\e90f";
+            }
+            .color .icon-skype:before {
+            	color: #00aff0;
+            }
+            .icon-soundcloud:before {
+            	content: "\e910";
+            }
+           	.color .icon-soundcloud:before {
+            	color: #f30;
+            }
+            .icon-spotify:before {
+            	content: "\e919";
+            }
+            .color .icon-spotify:before {
+            	color: #1ed760;
+            }
+            .icon-stackoverflow:before {
+            	content: "\e91b";
+            }
+            .color .icon-stackoverflow:before {
+            	color: #fe7a16;
+            }
+            .icon-steam:before {
+              content: "\e911";
+            }
+            .color .icon-steam:before {
+              color: #000;
+            }
+            .icon-twitch:before {
+            	content: "\e912";
+            }
+            .color .icon-twitch:before {
+            	color: #6441a5;
+            }
+            .icon-twitter:before {
+            	content: "\e913";
+            }
+            .color .icon-twitter:before {
+           		color: #1da1f2;
+            }
+            .icon-vimeo:before {
+            	content: "\e91a";
+            }
+            .color .icon-vimeo:before {
+            	color: #1ab7ea;
+            }
+            .icon-vk:before {
+            	content: "\e914";
+            }
+            .color .icon-vk:before {
+            	color: #6383a8;
+            }
+            .icon-wordpress:before {
+              content: "\e920";
+            }
+            .color .icon-wordpress:before {
+                color: #21759b;
+            }
+            .icon-youtube:before {
+            	content: "\e915";
+            }
+            .color .icon-youtube:before {
+            	color: #cd201f;
+            }
 			
 			/* Prettify */ 
 			pre.prettyprint,
 			code.prettyprint {
 				display: block;
-				width: 540px;
+				width: 100%;
+				box-sizing: border-box;
 				font-family: monospace;
 				white-space: pre;
 				padding:10px 20px;
@@ -837,15 +1031,18 @@ Support: hi@ajoen.com
 			{CustomCSS}
 			
 		</style>
-		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+		<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
     </head>
     <body onload="prettyPrint()">
 	
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
         <![endif]-->
-
-		<div class="container clearfix">
+        <a name="top"></a>
+		<div class="container clearfix {block:IfCenteredLayout}centered{/block:IfCenteredLayout}">
 
 			<aside class="grid4 first sidebar">
 				<header>
@@ -866,26 +1063,41 @@ Support: hi@ajoen.com
 						</ul>
 					</nav>
 					
-					<ul class="social-media">
-						{block:IfFacebookUsername}<li><a href="http://facebook.com/{text:Facebook Username}">&#xe01e;</a></li>{/block:IfFacebookUsername}
-						{block:IfTwitterUsername}<li><a href="http://twitter.com/{text:Twitter Username}">&#xe01d;</a></li>{/block:IfTwitterUsername}
-						{block:IfGooglePlusUsername}<li><a href="https://plus.google.com/{Google Plus Username}">&#xe007;</a></li>{/block:IfGooglePlusUsername}
-						{block:IfPinterestUsername}<li><a href="http://pinterest.com/{text:Pinterest Username}">&#xe01f;</a></li>{/block:IfPinterestUsername}
-						{block:IfLinkedinUsername}<li><a href="http://www.linkedin.com/in/{text:Linkedin Username}">&#xe014;</a></li>{/block:IfLinkedinUsername}
-						{block:IfInstagramUsername}<li><a href="http://instagram.com/{text:Instagram Username}">&#xe015;</a></li>{/block:IfInstagramUsername}
-						{block:IfSoundCloudUsername}<li><a href="https://soundcloud.com/{text:SoundCloud Username}">&#xe016;</a></li>{/block:IfSoundCloudUsername}
-						{block:IfLastFmUsername}<li><a href="http://www.last.fm/user/{text:LastFm Username}">&#xe017;</a></li>{/block:IfLastFmUsername}
-						{block:IfRdioUsername}<li><a href="http://www.rdio.com/people/{text:Rdio Username}">&#xe018;</a></li>{/block:IfRdioUsername}						
-						{block:IfDribbbleUsername}<li><a href="http://dribbble.com/{text:Dribbble Username}">&#xe019;</a></li>{/block:IfDribbbleUsername}
-						{block:IfVimeoUsername}<li><a href="http://vimeo.com/{text:Vimeo Username}">&#xe01a;</a></li>{/block:IfVimeoUsername}
-						{block:IfFlickrUsername}<li><a href="http://www.flickr.com/people/{text:Flickr Username}">&#xe021;</a></li>{/block:IfFlickrUsername}
-						{block:IfSpotifyUsername}<li><a href="http://open.spotify.com/user/{text:Spotify Username}">&#xe022;</a></li>{/block:IfSpotifyUsername}
-						{block:IfGithubUsername}<li><a href="https://github.com/{text:Github Username}">&#xe023;</a></li>{/block:IfGithubUsername}
+					<ul class="social-media {block:IfColorfulIcons}color{/block:IfColorfulIcons}">
+					    {block:IfBehanceUsername}<li><a href="https://behance.com/{text:Behance Username}"><span class="icon-behance icon"></span></a></li>{/block:IfBehanceUsername}
+					    {block:IfBloggerURL}<li><a href="{text:Blogger URL}"><span class="icon-blogger icon"></span></a></li>{/block:IfBloggerURL}
+					    {block:IfDribbbleUsername}<li><a href="https://dribbble.com/{text:Dribbble Username}"><span class="icon-dribbble icon"></span></a></li>{/block:IfDribbbleUsername}
+					    {block:IfDropboxURL}<li><a href="{text:Dropbox URL}"><span class="icon-dropbox icon"></span></a></li>{/block:IfDropboxURL}
+						{block:IfFacebookUsername}<li><a href="https://facebook.com/{text:Facebook Username}"><span class="icon-facebook icon"></span></a></li>{/block:IfFacebookUsername}
+						{block:IfFlickrUsername}<li><a href="http://www.flickr.com/people/{text:Flickr Username}"><span class="icon-flickr icon"></span></a></li>{/block:IfFlickrUsername}
+						{block:IfFoursquareUsername}<li><a href="https://foursquare.com/user/{text:Foursquare Username}"><span class="icon-foursquare icon"></span></a></li>{/block:IfFoursquareUsername}
+						{block:IfGithubUsername}<li><a href="https://github.com/{text:Github Username}"><span class="icon-github icon"></span></a></li>{/block:IfGithubUsername}
+						{block:IfGooglePlusUsername}<li><a href="https://plus.google.com/{GooglePlus Username}"><span class="icon-googleplus icon"></span></a></li>{/block:IfGooglePlusUsername}
+						{block:IfInstagramUsername}<li><a href="https://instagram.com/{text:Instagram Username}"><span class="icon-instagram icon"></span></a></li>{/block:IfInstagramUsername}
+						{block:IfLastFmUsername}<li><a href="https://www.last.fm/user/{text:LastFm Username}"><span class="icon-lastfm icon"></span></a></li>{/block:IfLastFmUsername}
+						{block:IfLinkedinUsername}<li><a href="https://www.linkedin.com/in/{text:Linkedin Username}"><span class="icon-linkedin icon"></span></a></li>{/block:IfLinkedinUsername}
+						{block:IfMediumUsername}<li><a href="https://www.medium.com/@{text:Medium Username}"><span class="icon-medium icon"></span></a></li>{/block:IfMediumUsername}
+						{block:IfMessengerUsername}<li><a href=" http://m.me/{text:Messenger Username}"><span class="icon-messenger icon"></span></a></li>{/block:IfMessengerUsername}
+						{block:IfPinterestUsername}<li><a href="https://pinterest.com/{text:Pinterest Username}"><span class="icon-pinterest icon"></span></a></li>{/block:IfPinterestUsername}
+						{block:IfPSNUsername}<li><a href="https://my.playstation.com/{text:PSN Username}"><span class="icon-playstation icon"></span></a></li>{/block:IfPSNUsername}
+						{block:IfRdioUsername}<li><a href="http://www.rdio.com/people/{text:Rdio Username}"><span class="icon-rdio icon"></span></a></li>{/block:IfRdioUsername}	
+						{block:IfSkypeName}<li><a href="skype:{text:Skype Name}"><span class="icon-skype icon"></span></a></li>{/block:IfSkypeName}	
+						{block:IfSoundCloudUsername}<li><a href="https://soundcloud.com/{text:SoundCloud Username}"><span class="icon-soundcloud icon"></span></a></li>{/block:IfSoundCloudUsername}
+						{block:IfSpotifyUsername}<li><a href="http://open.spotify.com/user/{text:Spotify Username}"><span class="icon-spotify icon"></span></a></li>{/block:IfSpotifyUsername}
+						{block:IfStackOverflowID}<li><a href="https://stackoverflow.com/users/{text:StackOverflow ID}"><span class="icon-stackoverflow icon"></span></a></li>{/block:IfStackOverflowID}
+						{block:IfSteamID}<li><a href="https://steamcommunity.com/id/{text:Steam ID}"><span class="icon-steam icon"></span></a></li>{/block:IfSteamID}
+						{block:IfTwitchUsername}<li><a href="https://twitch.tv/{text:Twitch Username}"><span class="icon-twitch icon"></span></a></li>{/block:IfTwitchUsername}
+						{block:IfTwitterUsername}<li><a href="https://twitter.com/{text:Twitter Username}"><span class="icon-twitter icon"></span></a></li>{/block:IfTwitterUsername}
+						{block:IfVimeoUsername}<li><a href="http://vimeo.com/{text:Vimeo Username}"><span class="icon-vimeo icon"></span></a></li>{/block:IfVimeoUsername}
+						{block:IfVKID}<li><a href="https://vk.com/{text:VK ID}"><span class="icon-vk icon"></span></a></li>{/block:IfVKID}
+						{block:IfWordPressURL}<li><a href="{text:WordPress URL}"><span class="icon-wordpress icon"></span></a></li>{/block:IfWordPressURL}
+					    {block:IfYouTubeUsername}<li><a href="https://www.youtube.com/{text:YouTube Username}"><span class="icon-youtube icon"></span></a></li>{/block:IfYouTubeUsername}
+	
 					</ul>
 					<div class="clearfix"></div>
 				</header>
 				<p id="back-top">
-					<a href="#top"><span></span></a>
+					<a href="#top"><span class="icon-chevron-up icon"></span></a>
 				</p>
 			</aside>
 			
@@ -915,9 +1127,8 @@ Support: hi@ajoen.com
 									<li class="share">
 										<a href="#">Share</a>
 										<ul class="share_cont">
-											{block:IfShareFacebook}<li><div class="fb-like" data-href="{Permalink}" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="arial"></div></li>{/block:IfShareFacebook}
-											{block:IfShareTwitter}<li><a href="https://twitter.com/share" class="twitter-share-button" data-text="{block:Title}{PlaintextTitle}{/block:Title}" data-text="{block:Title}{PlaintextTitle}{/block:Title}" data-text="{block:Title}{PlaintextTitle}{/block:Title}" data-url="{Permalink}">Tweet</a></li>{/block:IfShareTwitter}
-											{block:IfShareGooglePlus}<li><div class="g-plusone" data-size="medium" data-href="{Permalink}"></div></li>{/block:IfShareGooglePlus}
+											<li><div class="fb-like" data-href="{Permalink}" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="arial"></div></li>
+											<li><a href="https://twitter.com/share" class="twitter-share-button" data-text="{block:Title}{PlaintextTitle}{/block:Title}" data-text="{block:Title}{PlaintextTitle}{/block:Title}" data-text="{block:Title}{PlaintextTitle}{/block:Title}" data-url="{Permalink}">Tweet</a></li>
 										</ul>
 									</li>
 									{/block:IfShowSharingFeatures}
@@ -926,6 +1137,7 @@ Support: hi@ajoen.com
 							{/block:Date}
 
 							{Body}
+							
 							{block:HasTags} 
 							<ul class="tags">
 								{block:Tags}<li><a href="{TagURL}">#{Tag}</a></li>{/block:Tags}
@@ -948,9 +1160,8 @@ Support: hi@ajoen.com
 									<li class="share">
 										<a href="#">Share</a>
 										<ul class="share_cont">
-											{block:IfShareFacebook}<li><div class="fb-like" data-href="{Permalink}" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="arial"></div></li>{/block:IfShareFacebook}
-											{block:IfShareTwitter}<li><a href="https://twitter.com/share" class="twitter-share-button" data-text="{block:Title}{PlaintextTitle}{/block:Title}" data-text="{block:Title}{PlaintextTitle}{/block:Title}" data-text="{block:Title}{PlaintextTitle}{/block:Title}" data-url="{Permalink}">Tweet</a></li>{/block:IfShareTwitter}
-											{block:IfShareGooglePlus}<li><div class="g-plusone" data-size="medium" data-href="{Permalink}"></div></li>{/block:IfShareGooglePlus}
+											<li><div class="fb-like" data-href="{Permalink}" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="arial"></div></li>
+											<li><a href="https://twitter.com/share" class="twitter-share-button" data-text="{block:Title}{PlaintextTitle}{/block:Title}" data-text="{block:Title}{PlaintextTitle}{/block:Title}" data-text="{block:Title}{PlaintextTitle}{/block:Title}" data-url="{Permalink}">Tweet</a></li>
 										</ul>
 									</li>
 									{/block:IfShowSharingFeatures}
@@ -980,9 +1191,8 @@ Support: hi@ajoen.com
 									<li class="share">
 										<a href="#">Share</a>
 										<ul class="share_cont">
-											{block:IfShareFacebook}<li><div class="fb-like" data-href="{Permalink}" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="arial"></div></li>{/block:IfShareFacebook}
+											<li><div class="fb-like" data-href="{Permalink}" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="arial"></div></li>
 											{block:IfShareTwitter}<li><a href="https://twitter.com/share" class="twitter-share-button" data-text="{block:Title}{PlaintextTitle}{/block:Title}" data-text="{block:Title}{PlaintextTitle}{/block:Title}" data-text="{block:Title}{PlaintextTitle}{/block:Title}" data-url="{Permalink}">Tweet</a></li>{/block:IfShareTwitter}
-											{block:IfShareGooglePlus}<li><div class="g-plusone" data-size="medium" data-href="{Permalink}"></div></li>{/block:IfShareGooglePlus}
 										</ul>
 									</li>
 									{/block:IfShowSharingFeatures}
@@ -998,6 +1208,7 @@ Support: hi@ajoen.com
 								</ul>
 								{/block:HasTags} 
 							{/block:Caption}
+							
 						</div>
 					</article>
 					{/block:Photo}
@@ -1014,9 +1225,8 @@ Support: hi@ajoen.com
 									<li class="share">
 										<a href="#">Share</a>
 										<ul class="share_cont">
-											{block:IfShareFacebook}<li><div class="fb-like" data-href="{Permalink}" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="arial"></div></li>{/block:IfShareFacebook}
-											{block:IfShareTwitter}<li><a href="https://twitter.com/share" class="twitter-share-button" data-text="{block:Title}{PlaintextTitle}{/block:Title}" data-text="{block:Title}{PlaintextTitle}{/block:Title}" data-text="{block:Title}{PlaintextTitle}{/block:Title}" data-url="{Permalink}">Tweet</a></li>{/block:IfShareTwitter}
-											{block:IfShareGooglePlus}<li><div class="g-plusone" data-size="medium" data-href="{Permalink}"></div></li>{/block:IfShareGooglePlus}
+											<li><div class="fb-like" data-href="{Permalink}" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="arial"></div></li>
+											<li><a href="https://twitter.com/share" class="twitter-share-button" data-text="{block:Title}{PlaintextTitle}{/block:Title}" data-text="{block:Title}{PlaintextTitle}{/block:Title}" data-text="{block:Title}{PlaintextTitle}{/block:Title}" data-url="{Permalink}">Tweet</a></li>
 										</ul>
 									</li>
 									{/block:IfShowSharingFeatures}
@@ -1039,7 +1249,7 @@ Support: hi@ajoen.com
 					{block:Link}
 					<article class="grid8 first box link">
 						<div class="padding">
-							<h2><a href="{URL}" {Target}>{Name}</a></h2>
+							<h2><a href="{URL}" {Target}><span class="icon-link icon"></span> {Name}</a></h2>
 							
 							<div class="post-info">
 								<ul>
@@ -1050,9 +1260,8 @@ Support: hi@ajoen.com
 									<li class="share">
 										<a href="#">Share</a>
 										<ul class="share_cont">
-											{block:IfShareFacebook}<li><div class="fb-like" data-href="{Permalink}" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="arial"></div></li>{/block:IfShareFacebook}
-											{block:IfShareTwitter}<li><a href="https://twitter.com/share" class="twitter-share-button" data-text="{block:Title}{PlaintextTitle}{/block:Title}" data-text="{block:Title}{PlaintextTitle}{/block:Title}" data-text="{block:Title}{PlaintextTitle}{/block:Title}" data-url="{Permalink}">Tweet</a></li>{/block:IfShareTwitter}
-											{block:IfShareGooglePlus}<li><div class="g-plusone" data-size="medium" data-href="{Permalink}"></div></li>{/block:IfShareGooglePlus}
+											<li><div class="fb-like" data-href="{Permalink}" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="arial"></div></li>
+											<li><a href="https://twitter.com/share" class="twitter-share-button" data-text="{block:Title}{PlaintextTitle}{/block:Title}" data-text="{block:Title}{PlaintextTitle}{/block:Title}" data-text="{block:Title}{PlaintextTitle}{/block:Title}" data-url="{Permalink}">Tweet</a></li>
 										</ul>
 									</li>
 									{/block:IfShowSharingFeatures}
@@ -1086,9 +1295,8 @@ Support: hi@ajoen.com
 									<li class="share">
 										<a href="#">Share</a>
 										<ul class="share_cont">
-											{block:IfShareFacebook}<li><div class="fb-like" data-href="{Permalink}" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="arial"></div></li>{/block:IfShareFacebook}
-											{block:IfShareTwitter}<li><a href="https://twitter.com/share" class="twitter-share-button" data-text="{block:Title}{PlaintextTitle}{/block:Title}" data-text="{block:Title}{PlaintextTitle}{/block:Title}" data-text="{block:Title}{PlaintextTitle}{/block:Title}" data-url="{Permalink}">Tweet</a></li>{/block:IfShareTwitter}
-											{block:IfShareGooglePlus}<li><div class="g-plusone" data-size="medium" data-href="{Permalink}"></div></li>{/block:IfShareGooglePlus}
+											<li><div class="fb-like" data-href="{Permalink}" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="arial"></div></li>
+											<li><a href="https://twitter.com/share" class="twitter-share-button" data-text="{block:Title}{PlaintextTitle}{/block:Title}" data-text="{block:Title}{PlaintextTitle}{/block:Title}" data-text="{block:Title}{PlaintextTitle}{/block:Title}" data-url="{Permalink}">Tweet</a></li>
 										</ul>
 									</li>
 									{/block:IfShowSharingFeatures}
@@ -1125,9 +1333,8 @@ Support: hi@ajoen.com
 								<li class="share">
 									<a href="#">Share</a>
 									<ul class="share_cont">
-										{block:IfShareFacebook}<li><div class="fb-like" data-href="{Permalink}" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="arial"></div></li>{/block:IfShareFacebook}
-										{block:IfShareTwitter}<li><a href="https://twitter.com/share" class="twitter-share-button" data-text="{block:Title}{PlaintextTitle}{/block:Title}" data-text="{block:Title}{PlaintextTitle}{/block:Title}" data-text="{block:Title}{PlaintextTitle}{/block:Title}" data-url="{Permalink}">Tweet</a></li>{/block:IfShareTwitter}
-										{block:IfShareGooglePlus}<li><div class="g-plusone" data-size="medium" data-href="{Permalink}"></div></li>{/block:IfShareGooglePlus}
+										<li><div class="fb-like" data-href="{Permalink}" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="arial"></div></li>
+										<li><a href="https://twitter.com/share" class="twitter-share-button" data-text="{block:Title}{PlaintextTitle}{/block:Title}" data-text="{block:Title}{PlaintextTitle}{/block:Title}" data-text="{block:Title}{PlaintextTitle}{/block:Title}" data-url="{Permalink}">Tweet</a></li>
 									</ul>
 								</li>
 								{/block:IfShowSharingFeatures}
@@ -1135,7 +1342,7 @@ Support: hi@ajoen.com
 						</div>
 						
 						<div class="video-wrapper">
-							{Video-500}
+							{Video-700}
 						</div>					
 						{block:Caption}
 							
@@ -1154,7 +1361,7 @@ Support: hi@ajoen.com
 					<article class="grid8 first box audio">
 						<div class="padding">	
 							{block:TrackName}
-								<h2>{TrackName}</h2>
+								<h2><a href="{Permalink}">{TrackName}</a></h2>
 							{/block:TrackName}
 							<div class="post-info">
 								<ul>
@@ -1165,9 +1372,8 @@ Support: hi@ajoen.com
 									<li class="share">
 										<a href="#">Share</a>
 										<ul class="share_cont">
-											{block:IfShareFacebook}<li><div class="fb-like" data-href="{Permalink}" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="arial"></div></li>{/block:IfShareFacebook}
-											{block:IfShareTwitter}<li><a href="https://twitter.com/share" class="twitter-share-button" data-text="{block:Title}{PlaintextTitle}{/block:Title}" data-text="{block:Title}{PlaintextTitle}{/block:Title}" data-text="{block:Title}{PlaintextTitle}{/block:Title}" data-url="{Permalink}">Tweet</a></li>{/block:IfShareTwitter}
-											{block:IfShareGooglePlus}<li><div class="g-plusone" data-size="medium" data-href="{Permalink}"></div></li>{/block:IfShareGooglePlus}
+											<li><div class="fb-like" data-href="{Permalink}" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="arial"></div></li>
+											<li><a href="https://twitter.com/share" class="twitter-share-button" data-text="{block:Title}{PlaintextTitle}{/block:Title}" data-text="{block:Title}{PlaintextTitle}{/block:Title}" data-text="{block:Title}{PlaintextTitle}{/block:Title}" data-url="{Permalink}">Tweet</a></li>
 										</ul>
 									</li>
 									{/block:IfShowSharingFeatures}
@@ -1192,9 +1398,8 @@ Support: hi@ajoen.com
 									<li class="share">
 										<a href="#">Share</a>
 										<ul class="share_cont">
-											{block:IfShareFacebook}<li><div class="fb-like" data-href="{Permalink}" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="arial"></div></li>{/block:IfShareFacebook}
-											{block:IfShareTwitter}<li><a href="https://twitter.com/share" class="twitter-share-button" data-text="{block:Title}{PlaintextTitle}{/block:Title}" data-text="{block:Title}{PlaintextTitle}{/block:Title}" data-text="{block:Title}{PlaintextTitle}{/block:Title}" data-url="{Permalink}">Tweet</a></li>{/block:IfShareTwitter}
-											{block:IfShareGooglePlus}<li><div class="g-plusone" data-size="medium" data-href="{Permalink}"></div></li>{/block:IfShareGooglePlus}
+											<li><div class="fb-like" data-href="{Permalink}" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="arial"></div></li>
+											<li><a href="https://twitter.com/share" class="twitter-share-button" data-text="{block:Title}{PlaintextTitle}{/block:Title}" data-text="{block:Title}{PlaintextTitle}{/block:Title}" data-text="{block:Title}{PlaintextTitle}{/block:Title}" data-url="{Permalink}">Tweet</a></li>
 										</ul>
 									</li>
 									{/block:IfShowSharingFeatures}
@@ -1238,8 +1443,8 @@ Support: hi@ajoen.com
 						
 						{block:PermalinkPagination}
 						<ul class="pagination">
-							{block:PreviousPost}<li class="prev"><a href="{PreviousPost}">« prev</a></li>{/block:PreviousPost}
-							{block:NextPost}<li class="next"><a href="{NextPost}"> next »</a></li>{/block:NextPost}
+							{block:PreviousPost}<li class="prev"><a href="{PreviousPost}"><span class="icon-chevron-left icon"></span> prev</a></li>{/block:PreviousPost}
+							{block:NextPost}<li class="next"><a href="{NextPost}"> next <span class="icon-chevron-right icon"></span></a></li>{/block:NextPost}
 						</ul>
 						{/block:PermalinkPagination}
 					{/block:Posts}
@@ -1248,47 +1453,75 @@ Support: hi@ajoen.com
 						{block:IfNotInfiniteScrolling}
 							{block:Pagination}
 							<ul class="pagination">						
-								{block:PreviousPage}<li class="prev"><a href="{PreviousPage}">« prev</a></li>{/block:PreviousPage}
-								{block:NextPage}<li class="next"><a href="{NextPage}"> next »</a></li>{/block:NextPage}
+								{block:PreviousPage}<li class="prev"><a href="{PreviousPage}"><span class="icon-chevron-left icon"></span> prev</a></li>{/block:PreviousPage}
+								{block:NextPage}<li class="next"><a href="{NextPage}"> next <span class="icon-chevron-right icon"></span></a></li>{/block:NextPage}
 							</ul>
 							{/block:Pagination}
 						{block:IfNotInfiniteScrolling}
 					{/block:IndexPage}
 				</section>		
 		</div>
+
+		<!--  Javascripts -->
+		<script type="text/javascript">
+            $(document).ready(function () {
+
+                /* Smooth Scroll */
+                $('a[href*="#"]:not([href="#"])').click(function () {
+                    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                        var target = $(this.hash);
+                        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                        if (target.length) {
+                            $('html, body').animate({
+                                scrollTop: target.offset().top
+                            }, 400);
+                            return false;
+                        }
+                    }
+                });
+    		
+    		    /* Back to Top */
+        		if ($('#back-top').length) {
+                    var scrollTrigger = 400, // px
+                        backToTop = function () {
+                            var scrollTop = $(window).scrollTop();
+                            if (scrollTop > scrollTrigger) {
+                                $('#back-top').addClass('show');
+                            } else {
+                                $('#back-top').removeClass('show');
+                            }
+                        };
+                    backToTop();
+                    $(window).on('scroll', function () {
+                        backToTop();
+                    });
+                };
+                
+                /* Share */
+                $(".share a").click(function () {
+                        $(this).parent().find("ul.share_cont").slideToggle();
+                        return false;
+                });
+                
+                /* Responsive Video */
+                var videoWrappers = document.getElementsByClassName('video-wrapper');
+                [].forEach.call( videoWrappers, function (el, i) {
+                    var width = el.getElementsByTagName('iframe')[0].width,
+                        height = el.getElementsByTagName('iframe')[0].height;
+                    el.style.paddingBottom = height / width * 100 + '%';
+                });
+            
+            });
+		</script>
 		
-		<!--  Infinite Scrolling -->
 		{block:IfInfiniteScrolling}
+		<!--  Infinite Scrolling -->
         <script type="text/javascript" src="https://raw.github.com/gist/4237664/6aef7b88d835b2fc02905bfb43b6987653de6f31/tumblr_autopager_custom.js"></script>
         {/block:IfInfiniteScrolling}
-		
-		<!--  Back-top -->
-		<script type="text/javascript">
-			$(document).ready(function(){
-				$("#back-top").hide();
-				$(function () {
-					$(window).scroll(function () {
-						if ($(this).scrollTop() > 100) {
-							$('#back-top').fadeIn();
-						} else {
-							$('#back-top').fadeOut();
-						}
-					});
-					$('#back-top a').click(function () {
-						$('body,html').animate({
-							scrollTop: 0
-						}, 800);
-						return false;
-					});
-				});
-                {block:TagPage}
-                $(".{Tag}").addClass("active");
-                {/block:TagPage}
-			});
-		</script>
 
-		<!--  Disqus -->
+		
 		{block:IfDisqusShortname}
+		<!--  Disqus -->
 			<script type="text/javascript">
 				var disqus_shortname = '{text:Disqus Shortname}'; 
 
@@ -1314,10 +1547,10 @@ Support: hi@ajoen.com
 			{/block:PermalinkPage}
 		{/block:IfDisqusShortname}
 		
-		<!--  Share -->
+		
 		{block:IfShowSharingFeatures}
-			<!--  Share Facebook -->
-			{block:IfShareFacebook}
+		<!--  Share -->
+			<!--  + Share Facebook -->
 			<div id="fb-root"></div>
 			<script>(function(d, s, id) {
 			  var js, fjs = d.getElementsByTagName(s)[0];
@@ -1326,37 +1559,16 @@ Support: hi@ajoen.com
 			  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
 			  fjs.parentNode.insertBefore(js, fjs);
 			}(document, 'script', 'facebook-jssdk'));</script>
-			{/block:IfShareFacebook}
-			<!--  Share Twitter -->
-			{block:IfShareTwitter}
+			<!--  + Share Twitter -->
 			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-			{/block:IfShareTwitter}
-			<!--  Share Google Plus -->
-			{block:IfShareGooglePlus}
-			<script type="text/javascript">
-			  (function() {
-				var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-				po.src = 'https://apis.google.com/js/plusone.js';
-				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-			  })();
-			</script>
-			{/block:IfShareGooglePlus}
-            <script type="text/javascript">
-                (function() {
-                    $("li.share a").live("click", function() {
-                        $(this).parent().find("ul.share_cont").slideToggle();
-                        
-                        return false;
-                    });
-                })();
-            </script>
 		{/block:IfShowSharingFeatures}
 		
 		<!--  Prettify -->
 		<script type="text/javascript" src="http://static.tumblr.com/kmpcbew/Ohumg2lmw/prettify.js"></script>
 		
-		<!--  Google Analytics -->
+		
 		{block:IfGoogleAnalyticsID}
+		<!--  Google Analytics -->
 		<script type="text/javascript">
 			var _gaq = _gaq || [];
 			_gaq.push(['_setAccount', '{text:Google Analytics ID}']);
